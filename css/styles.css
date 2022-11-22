@@ -825,7 +825,7 @@ a[href*="goo.gl"]:focus {
   color: var(--active-color);
 }
 
-.footer-input-container {
+.footer-form-form {
   display: flex;
   position: relative;
 }
@@ -961,8 +961,8 @@ a[href*="goo.gl"]:focus {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
 
+}
 
 .modal-form-container {
   display: flex;
@@ -1001,6 +1001,15 @@ a[href*="goo.gl"]:focus {
 .modal-icon {
   position: absolute;
   fill: #000000;
+  transition-property: fill;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
+
+}
+
+.modal-icon:hover,
+.modal-icon:focus {
+  fill: var(--active-color);
 }
 
 .form-textarea {
@@ -1040,8 +1049,7 @@ a[href*="goo.gl"]:focus {
 
 .modal-form-input:focus-within>.modal-icons,
 .modal-form-input:hover>.modal-icons,
-.modal-icon:hover,
-.modal-icon:focus {
+.modal-form-input:focus {
   fill: var(--active-color);
 }
 
